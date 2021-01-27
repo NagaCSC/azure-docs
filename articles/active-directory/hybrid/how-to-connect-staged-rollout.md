@@ -91,6 +91,9 @@ The following scenarios are not supported for staged rollout:
 
 - Windows 10 Hybrid Join or Azure AD Join primary refresh token acquisition for all versions, when user’s on-premises UPN is not routable. This scenario will fall back to the WS-Trust endpoint while in staged rollout mode, but will stop working when staged migration is complete and user sign-on is no longer relying on federation server.
 
+- if you have Non-Persistent VDI setup. you need to stay on Federated domain. moving to stagged rollout or managed domain not supported on Non-persistent VDI. 
+Please refer the following doc
+https://docs.microsoft.com/en-us/azure/active-directory/devices/howto-device-identity-virtual-desktop-infrastructure
 
 ## Get started with staged rollout
 
